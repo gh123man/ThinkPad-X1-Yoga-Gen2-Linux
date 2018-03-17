@@ -19,6 +19,12 @@ The following config enables the following:
  - scroll coasting (kinetic scrolling)
  - sane sensitivity + scroll distance
 
+
+1. Compile from source
+ Use the forked version of the driver found here: https://github.com/p2rkw/xf86-input-mtrack as the original is not maintained anymore
+
+2. Config
+
 ```xf86conf
 Section "InputClass"
     MatchIsTouchpad "on"
