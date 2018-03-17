@@ -20,10 +20,11 @@ The following config enables the following:
  - sane sensitivity + scroll distance
 
 
-1. Compile from source
- Use the forked version of the driver found here: https://github.com/p2rkw/xf86-input-mtrack as the original is not maintained anymore
+### Compile from source
 
-2. Config
+Use the forked version of the driver found here: https://github.com/p2rkw/xf86-input-mtrack as the original is not maintained anymore
+
+### Config
 
 ```xf86conf
 Section "InputClass"
