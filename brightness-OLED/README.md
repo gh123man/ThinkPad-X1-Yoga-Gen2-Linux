@@ -2,7 +2,9 @@
 
 This script enables the use of the backlight keys, and system backlight settings in Linux for the OLED screen. 
 
-Tested on Debain 9 + xfce
+Tested on:
+ - Debain 9 + xfce 
+ - Kubuntu 17.10
 
 # Prerequisites
 

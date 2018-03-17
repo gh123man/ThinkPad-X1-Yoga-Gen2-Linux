@@ -9,6 +9,56 @@ Most of this was only tested on Debain. Ubuntu should work with the same instruc
 
 # Touchpad 
 
+## mTrack driver (xf86-input-mtrack)
+This driver works really well with a good configuration. 
+The following config enables the following:
+ - left click anywhere
+ - left click at bottom left edge
+ - right click on bottom right edge 
+ - 2 finger right click
+ - scroll coasting (kinetic scrolling)
+ - sane sensitivity + scroll distance
+
+```xf86conf
+Section "InputClass"
+    MatchIsTouchpad "on"
+    Identifier      "Touchpads"
+    Driver          "mtrack"
+    Option          "Sensitivity" "0.55"
+    Option          "FingerHigh" "5"
+    Option          "FingerLow" "1"
+    Option          "IgnoreThumb" "true"
+    Option          "IgnorePalm" "true"
+    Option          "TapButton1" "0"
+    Option          "TapButton2" "0"
+    Option          "TapButton3" "0"
+    Option          "TapButton4" "0"
+    Option          "ClickFinger0" "1"
+    Option          "ClickFinger1" "1"
+    Option          "ClickFinger2" "3"
+    Option          "ClickFinger3" "0"
+    Option          "ButtonZonesEnable" "true"
+    Option          "ButtonMoveEmulate" "false"
+    Option          "ButtonIntegrated" "true"
+    Option          "ClickTime" "25"
+    Option          "MaxTapTime" "120"
+    Option          "BottomEdge" "25"
+    Option          "SwipeLeftButton" "8"
+    Option          "SwipeRightButton" "9"
+    Option          "SwipeUpButton" "0"
+    Option          "SwipeDownButton" "0"
+    Option          "ScrollDistance" "75"
+    Option          "ScrollUpButton" "4"
+    Option          "ScrollDownButton" "5"
+    Option          "ScrollCoastDuration" "800"
+    Option          "ScrollCoastEnableSpeed" ".4"
+EndSection
+
+```
+
+
+## Synaptics Driver
+
 The touchpad will work out of the box on debain + xfce. But you will want to install the more specific driver to have more configuration options. 
 
 ```bash
