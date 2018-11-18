@@ -78,3 +78,12 @@ To make the settings stick by default, add them to `~/.xsessionrc` like so:
 ```bash 
     xinput set-prop "SynPS/2 Synaptics TouchPad" 330 0 0 0 0 0 0 0 0
 ```
+
+
+# Repair GRUB after a windows 10 upgrade
+
+https://askubuntu.com/a/655279
+
+1. Run CMD as admin 
+2. bcdedit /set {bootmgr} path \EFI\debian\grubx64.efi
+3. reboot
